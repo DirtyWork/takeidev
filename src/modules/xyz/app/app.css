@@ -8,3 +8,8 @@
 .xyz-push {
     height: 2.5rem;
 }
+.xyz-social {
+    bottom: 50%;
+    position:absolute;
+    right: 0;
+}
