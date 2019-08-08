@@ -1,9 +1,9 @@
-path{
+path {
     fill: rgb(33, 0, 75);
 }
-a:hover svg path{
+a:hover svg path {
     fill: rgb(111, 0, 255);
 }
-a{
+a {
     display: block;
 }
