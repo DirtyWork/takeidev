@@ -4,7 +4,7 @@ nav {
     text-align: center;
 }
 
-a{
+a {
     color: #fff;
     display: inline-block;
     height: 4rem;
@@ -12,8 +12,8 @@ a{
     padding: 0 1rem;
     text-decoration: none;
 }
-a:hover{
-    color: rgb(111,0,255);
+a:hover {
+    color: rgb(111, 0, 255);
     cursor: pointer;
     text-decoration: none;
 }
