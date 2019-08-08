@@ -1,5 +1,19 @@
-nav{
+nav {
     background-color: rgb(33, 0, 75);
-    color: #FFF;
-    height: 60px;
+    height: 4rem;
+    text-align: center;
+}
+
+a{
+    color: #fff;
+    display: inline-block;
+    height: 4rem;
+    line-height: 4rem;
+    padding: 0 1rem;
+    text-decoration: none;
+}
+a:hover{
+    color: rgb(111,0,255);
+    cursor: pointer;
+    text-decoration: none;
 }
