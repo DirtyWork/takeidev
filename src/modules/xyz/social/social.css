@@ -3,6 +3,7 @@ path {
 }
 a:hover svg path {
     fill: rgb(111, 0, 255);
+    transform: scale(1.2);
 }
 a {
     display: block;

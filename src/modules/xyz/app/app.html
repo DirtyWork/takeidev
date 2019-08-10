@@ -1,8 +1,20 @@
 <template>
     <div class="xyz-container">
         <header>
-            <xyz-nav></xyz-nav>
+            <xyz-nav onnav={navigate}></xyz-nav>
         </header>
+
+        <div class="page-container">
+            <template if:true={isHome}>
+                <xyz-home></xyz-home>
+            </template>
+            <template if:true={isBlog}>
+                <xyz-blog></xyz-blog>
+            </template>
+            <template if:true={isCv}>
+                <xyz-cv></xyz-cv>
+            </template>
+        </div>
 
         <xyz-social class="xyz-social"></xyz-social>
 
