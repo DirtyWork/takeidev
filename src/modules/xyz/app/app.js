@@ -19,10 +19,6 @@ export default class App extends LightningElement {
         };
     }
 
-    navigate(evt) {
-        this.currentPage = evt.detail;
-    }
-
     allowedPage(param) {
         return PAGES.includes(param);
     }
