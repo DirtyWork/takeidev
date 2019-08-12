@@ -17,6 +17,6 @@ a:hover {
     cursor: pointer;
     text-decoration: none;
 }
-a.active{
+a.active {
     color: rgb(111, 0, 255);
 }

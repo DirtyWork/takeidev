@@ -25,12 +25,12 @@ footer {
     padding-bottom: 0.5rem;
 }
 
-@media (max-width: 1024px){
+@media (max-width: 1024px) {
     .page-container {
         width: 85vw;
-    }    
-} 
-@media (max-width: 700px){
+    }
+}
+@media (max-width: 700px) {
     .page-container {
         width: 70vw;
     }
