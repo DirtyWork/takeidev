@@ -1,11 +1,21 @@
-import { LightningElement } from 'lwc';
+import { LightningElement, api } from 'lwc';
 
 export default class Nav extends LightningElement {
+    @api currentPage;
     navTo(evt) {
-        // const url = new URL(window.location.href);
-        // url.searchParams.set('page', evt.target.dataset.page);
-        // this.dispatchEvent(new CustomEvent('nav',{detail : evt.target.dataset.page}));
-        // window.history.pushState('', '', url);
         window.location.hash = evt.target.dataset.page;
+    }
+
+    get homeActive(){
+        if(this.currentPage === 'home') return 'active';
+        return '';
+    }
+    get blogActive(){
+        if(this.currentPage === 'blog') return 'active';
+        return '';
+    }
+    get cvActive(){
+        if(this.currentPage === 'cv') return 'active';
+        return '';
     }
 }
