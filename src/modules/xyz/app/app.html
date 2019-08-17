@@ -1,9 +1,8 @@
 <template>
+    <header>
+        <xyz-nav window-size={windowSize} current-page={currentPage}></xyz-nav>
+    </header>
     <div class="xyz-container">
-        <header>
-            <xyz-nav current-page={currentPage}></xyz-nav>
-        </header>
-
         <div class="page-container">
             <template if:true={isHome}>
                 <xyz-home></xyz-home>

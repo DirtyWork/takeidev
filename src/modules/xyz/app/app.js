@@ -2,10 +2,26 @@ import { LightningElement, track } from 'lwc';
 
 const PAGES = ['home', 'blog', 'cv'];
 
+const addEvent = function(object, type, callback) {
+    if (object == null || typeof(object) == 'undefined') return;
+    if (object.addEventListener) {
+        object.addEventListener(type, callback, false);
+    } else if (object.attachEvent) {
+        object.attachEvent("on" + type, callback);
+    } else {
+        object["on"+type] = callback;
+    }
+};
+
 export default class App extends LightningElement {
     @track currentPage = 'home';
+    @track windowSize;
 
     connectedCallback() {
+        if(window.innerWidth > 1200) this.windowSize = 'large';
+        else if(window.innerWidth > 600) this.windowSize = 'medium';
+        else this.windowSize = 'small';
+
         if (!window.location.hash) window.location.hash = 'home';
         window.onhashchange = () => {
             if (window.location.hash.length > 1) {
@@ -17,6 +33,17 @@ export default class App extends LightningElement {
                 }
             }
         };
+
+        addEvent(window, "resize", () => {
+            const windowSize = this.windowSize;
+            if(window.innerWidth < 601 && windowSize !== 'small'){
+                this.windowSize = 'small';
+            } else if(window.innerWidth > 600 && windowSize !== 'medium'){
+                this.windowSize = 'medium';
+            } else if(window.innerWidth > 1200 && windowSize !== 'large'){
+                this.windowSize = 'large';
+            }
+        });
     }
 
     allowedPage(param) {

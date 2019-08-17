@@ -1,7 +1,23 @@
 <template>
-    <nav>
-        <a class={homeActive} data-page="home" onclick={navTo}>Home</a>
-        <a class={blogActive} data-page="blog" onclick={navTo}>Blog</a>
-        <a class={cvActive} data-page="cv" onclick={navTo}>Résumé</a>
-    </nav>
+    <template if:true={navForMobile}>
+        <div class="xyz-nav-mobile">
+            <a class={homeActive} data-page="home" onclick={navTo}>Home</a>
+            <a class={blogActive} data-page="blog" onclick={navTo}>Blog</a>
+            <a class={cvActive} data-page="cv" onclick={navTo}>Résumé</a>
+        </div>
+    </template>
+    <template if:false={navForMobile}>
+        <nav class="xyz-nav">
+            <img src="/resources/takei.png" width="120px"/>
+            <a class={homeActive} data-page="home" onclick={navTo}>
+                HOME
+            </a>
+            <a class={blogActive} data-page="blog" onclick={navTo}>
+                BLOG
+            </a>
+            <a class={cvActive} data-page="cv" onclick={navTo}>
+                RÉSUMÉ
+            </a>
+        </nav>
+    </template>
 </template>

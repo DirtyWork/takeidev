@@ -1,17 +1,36 @@
-nav {
-    background-color: rgb(33, 0, 75);
-    height: 4rem;
+.xyz-nav {
+    background: #222;
+    width: 120px;
+    height: 100%;
+    position: fixed !important;
+    z-index: 1;
+    overflow: auto;
+}
+.xyz-nav-mobile {
+    background-color: rgba(0, 0 ,0 , 0.2);
+    height: 2rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+a {
+    color: #FFF;
+    border: none;
+    outline: 0;
     text-align: center;
 }
-
-a {
-    color: #fff;
-    display: inline-block;
-    height: 4rem;
+.xyz-nav a {
+    display: block;
     line-height: 4rem;
-    padding: 0 1rem;
-    text-decoration: none;
+    width: 100%;
 }
+.xyz-nav-mobile a {
+    display: inline-block;
+    line-height: 2rem;
+    width: 33%
+}
+
 a:hover {
     color: rgb(111, 0, 255);
     cursor: pointer;
@@ -19,4 +38,8 @@ a:hover {
 }
 a.active {
     color: rgb(111, 0, 255);
+}
+img{
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
