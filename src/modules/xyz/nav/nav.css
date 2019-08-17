@@ -7,7 +7,7 @@
     overflow: auto;
 }
 .xyz-nav-mobile {
-    background-color: rgba(0, 0 ,0 , 0.2);
+    background-color: rgba(0, 0, 0, 0.2);
     height: 2rem;
     position: fixed;
     top: 0;
@@ -15,7 +15,7 @@
     z-index: 1;
 }
 a {
-    color: #FFF;
+    color: #fff;
     border: none;
     outline: 0;
     text-align: center;
@@ -28,7 +28,7 @@ a {
 .xyz-nav-mobile a {
     display: inline-block;
     line-height: 2rem;
-    width: 33%
+    width: 33%;
 }
 
 a:hover {
@@ -39,7 +39,7 @@ a:hover {
 a.active {
     color: rgb(111, 0, 255);
 }
-img{
+img {
     padding-top: 2rem;
     padding-bottom: 2rem;
 }

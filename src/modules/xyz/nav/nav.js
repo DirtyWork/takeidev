@@ -7,7 +7,7 @@ export default class Nav extends LightningElement {
         window.location.hash = evt.target.dataset.page;
     }
 
-    get navForMobile(){
+    get navForMobile() {
         return this.windowSize === 'small';
     }
     get homeActive() {

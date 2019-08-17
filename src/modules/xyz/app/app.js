@@ -3,13 +3,13 @@ import { LightningElement, track } from 'lwc';
 const PAGES = ['home', 'blog', 'cv'];
 
 const addEvent = function(object, type, callback) {
-    if (object == null || typeof(object) == 'undefined') return;
+    if (object == null || typeof object == 'undefined') return;
     if (object.addEventListener) {
         object.addEventListener(type, callback, false);
     } else if (object.attachEvent) {
-        object.attachEvent("on" + type, callback);
+        object.attachEvent('on' + type, callback);
     } else {
-        object["on"+type] = callback;
+        object['on' + type] = callback;
     }
 };
 
@@ -18,8 +18,8 @@ export default class App extends LightningElement {
     @track windowSize;
 
     connectedCallback() {
-        if(window.innerWidth > 1200) this.windowSize = 'large';
-        else if(window.innerWidth > 600) this.windowSize = 'medium';
+        if (window.innerWidth > 1200) this.windowSize = 'large';
+        else if (window.innerWidth > 600) this.windowSize = 'medium';
         else this.windowSize = 'small';
 
         if (!window.location.hash) window.location.hash = 'home';
@@ -34,13 +34,13 @@ export default class App extends LightningElement {
             }
         };
 
-        addEvent(window, "resize", () => {
+        addEvent(window, 'resize', () => {
             const windowSize = this.windowSize;
-            if(window.innerWidth < 601 && windowSize !== 'small'){
+            if (window.innerWidth < 601 && windowSize !== 'small') {
                 this.windowSize = 'small';
-            } else if(window.innerWidth > 600 && windowSize !== 'medium'){
+            } else if (window.innerWidth > 600 && windowSize !== 'medium') {
                 this.windowSize = 'medium';
-            } else if(window.innerWidth > 1200 && windowSize !== 'large'){
+            } else if (window.innerWidth > 1200 && windowSize !== 'large') {
                 this.windowSize = 'large';
             }
         });
