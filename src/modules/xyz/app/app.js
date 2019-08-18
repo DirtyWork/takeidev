@@ -41,7 +41,7 @@ export default class App extends LightningElement {
         });
     }
 
-    handleHash(){
+    handleHash() {
         if (window.location.hash.length > 1) {
             const param = window.location.hash.substring(1);
             if (this.allowedPage(param)) {
