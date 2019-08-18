@@ -1,0 +1,26 @@
+section.main-section {
+    padding-bottom: 3rem;
+}
+header {
+    height: 3rem;
+}
+header:hover,
+header:hover svg {
+    color: rgb(111, 0, 255);
+    cursor: pointer;
+    fill: rgb(111, 0, 255);
+}
+h2 {
+    display: inline-block;
+    line-height: 3rem;
+    margin: 0;
+}
+svg {
+    fill: #FFF;
+    float: right;
+}
+hr {
+    border-color: rgb(111, 0, 255);
+    margin: 0;
+    width: 100%;
+}

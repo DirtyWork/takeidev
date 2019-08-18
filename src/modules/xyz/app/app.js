@@ -23,15 +23,10 @@ export default class App extends LightningElement {
         else this.windowSize = 'small';
 
         if (!window.location.hash) window.location.hash = 'home';
+        this.handleHash();
+
         window.onhashchange = () => {
-            if (window.location.hash.length > 1) {
-                const param = window.location.hash.substring(1);
-                if (this.allowedPage(param)) {
-                    this.currentPage = param;
-                } else {
-                    window.location.hash = 'home';
-                }
-            }
+            this.handleHash();
         };
 
         addEvent(window, 'resize', () => {
@@ -44,6 +39,17 @@ export default class App extends LightningElement {
                 this.windowSize = 'large';
             }
         });
+    }
+
+    handleHash(){
+        if (window.location.hash.length > 1) {
+            const param = window.location.hash.substring(1);
+            if (this.allowedPage(param)) {
+                this.currentPage = param;
+            } else {
+                window.location.hash = 'home';
+            }
+        }
     }
 
     allowedPage(param) {

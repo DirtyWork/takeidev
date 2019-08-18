@@ -1,10 +1,9 @@
-hr {
-    border-color: rgb(111, 0, 255);
-    margin: 0;
-    width: 10rem;
-}
 .sub-header {
     color: #888;
     font-size: 1rem;
     padding-left: 1rem;
+}
+p {
+    padding-bottom: 1rem;
+    margin: 0;
 }
